@@ -18,4 +18,13 @@ public class CustomList {
 
     // Will be implemented later using TDD (leave blank for now)
     public boolean hasCity(City city) { return cities.contains(city); }
+
+    public void deleteCity(City city) {
+        for(int i = 0 ; i < cities.size(); i++){
+            if((cities.get(i).getCityName().equals(city.getCityName())) && (cities.get(i).getProvinceName().equals(city.getProvinceName()))) {
+                cities.remove(i);
+                break;
+            }
+        }
+    }
 }
